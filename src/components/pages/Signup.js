@@ -20,8 +20,12 @@ const Signup = () => {
     var emergency=e.target[3].value;
     var email=e.target[4].value;
     var typeOfDis=e.target[5].value;
-    var pass=e.target[6].value;
+    var pass1=e.target[6].value;
+    var pass2=e.target[7].value;
 
+    if(pass1!==pass2){
+      alert("password does not match");
+    }
 
     try {
       const { data } = await axios.post(
